@@ -7,14 +7,12 @@ using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the DI container.
 builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("aspnetcore-b2c-descope-sample"));
+    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("aspnetcore-b2c-descope-sample"))
+    .EnableTokenAcquisitionToCallDownstreamApi(new[] { "openid", "profile", "email" })
+    .AddInMemoryTokenCaches();
 
 builder.Services.AddControllersWithViews();
-
-// Add other necessary services here
-// e.g., builder.Services.AddScoped<YourService>();
 
 var app = builder.Build();
 

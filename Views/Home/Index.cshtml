@@ -3,14 +3,17 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome to Azure AD B2C Sample</h1>
+    <h3 class="display-5">Welcome to Descope + Azure AD B2C Sample App</h3>
+    <p/>
     @if (User.Identity.IsAuthenticated)
     {
         <p>Hello, @User.Identity.Name!</p>
+        <p/>
         <a class="btn btn-danger" asp-action="SignOut">Sign Out</a>
     }
     else
     {
+        <p/>
         <a class="btn btn-primary" asp-action="SignIn">Sign In</a>
     }
 </div>

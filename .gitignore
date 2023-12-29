@@ -1,1 +1,7 @@
-bin/
+.vs
+obj
+bin
+packages
+/.vs
+/obj
+/bin

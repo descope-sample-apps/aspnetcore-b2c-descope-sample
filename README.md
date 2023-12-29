@@ -41,11 +41,14 @@ dotnet restore
 
 ## Configuring Authentication Settings
 
-Open `appsettings.json` and replace the placeholder values with your actual Azure AD B2C settings:
+Open `appsettings.json` file and replace the placeholder values with your actual Azure AD B2C settings:
 
 - **ClientId**: Your Azure AD B2C application client ID.
+- **ClientSecret**: Your Azure AD B2C application Client Secret. You can generate one by following this [guide](https://learn.microsoft.com/en-us/azure/active-directory-b2c/tutorial-register-applications#create-a-client-secret).
 - **Domain**: Your Azure AD B2C domain.
 - **SignUpSignInPolicyId**: Your Azure AD B2C sign-up/sign-in policy ID.
+
+> **Note:** Since this is an ASP.NET Core application, the app is considered a confidential client and is therefore capable of storing a client secret securely.
 
 ## Running the Application 🚀
 
@@ -55,7 +58,7 @@ To start the application:
 dotnet run
 ```
 
-Navigate to `https://localhost:5001/` in your browser.
+Navigate to `https://localhost:5109/` in your browser.
 
 ## Configuring Azure AD B2C and Descope
 

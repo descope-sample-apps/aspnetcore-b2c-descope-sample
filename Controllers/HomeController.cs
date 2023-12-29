@@ -22,20 +22,20 @@ public class HomeController : Controller
     }
 
     public IActionResult Dashboard()
-{
-    if (User.Identity.IsAuthenticated)
     {
-        return View();
+        if (User.Identity.IsAuthenticated)
+        {
+            return View();
+        }
+        else
+        {
+            return RedirectToAction("Index");
+        }
     }
-    else
-    {
-        return RedirectToAction("Index");
-    }
-}
 
     public IActionResult SignIn()
     {
-        var redirectUrl = Url.Action(nameof(HomeController.Index), "Home");
+        var redirectUrl = Url.Action(nameof(HomeController.Dashboard), "Home");
         return Challenge(
             new AuthenticationProperties { RedirectUri = redirectUrl },
             OpenIdConnectDefaults.AuthenticationScheme);
