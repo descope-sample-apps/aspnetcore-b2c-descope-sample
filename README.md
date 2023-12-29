@@ -1,4 +1,4 @@
-![Azure AD B2C and Descope Banner](https://github.com/descope-sample-apps/aspnetcore-b2c-descope-sample/assets/banner.jpg)
+<img width="1400" alt="Screenshot 2023-12-29 at 9 48 13 AM" src="https://github.com/descope-sample-apps/aspnetcore-b2c-descope-sample/assets/32936811/309fd9d3-7d14-4c3e-a02b-81f87901e7b4">
 
 ---
 
@@ -43,7 +43,7 @@ dotnet restore
 
 Open `appsettings.json` file and replace the placeholder values with your actual Azure AD B2C settings:
 
-- **ClientId**: Your Azure AD B2C application client ID.
+- **ClientId**: Your Azure AD B2C application Client ID.
 - **ClientSecret**: Your Azure AD B2C application Client Secret. You can generate one by following this [guide](https://learn.microsoft.com/en-us/azure/active-directory-b2c/tutorial-register-applications#create-a-client-secret).
 - **Domain**: Your Azure AD B2C domain.
 - **SignUpSignInPolicyId**: Your Azure AD B2C sign-up/sign-in policy ID.
