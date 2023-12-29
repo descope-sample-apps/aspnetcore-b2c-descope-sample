@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container">
+    <h2>Dashboard</h2>
+    <p>Welcome, @User.FindFirst("name")?.Value</p>
+    <p>Email: @User.FindFirst("emails")?.Value</p>
+</div>

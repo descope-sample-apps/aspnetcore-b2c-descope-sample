@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Azure AD B2C Sample</h1>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p>Hello, @User.Identity.Name!</p>
+        <a class="btn btn-danger" asp-action="SignOut">Sign Out</a>
+    }
+    else
+    {
+        <a class="btn btn-primary" asp-action="SignIn">Sign In</a>
+    }
+</div>

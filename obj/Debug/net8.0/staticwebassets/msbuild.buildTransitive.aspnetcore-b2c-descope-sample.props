@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/aspnetcore-b2c-descope-sample.props" />
+</Project>
